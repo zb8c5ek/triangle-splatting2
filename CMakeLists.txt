@@ -7,10 +7,13 @@ if(DEFINED ENV{CONDA_PREFIX})
     list(APPEND CMAKE_PREFIX_PATH "$ENV{CONDA_PREFIX}/lib")
 endif()
 
-if(DEFINED ENV{CONDA_PREFIX})
-    set(CMAKE_CUDA_COMPILER "$ENV{CONDA_PREFIX}/bin/nvcc")
-    set(CUDA_TOOLKIT_ROOT_DIR "$ENV{CONDA_PREFIX}/targets/x86_64-linux")
-endif()
+#if(DEFINED ENV{CONDA_PREFIX})
+#    set(CMAKE_CUDA_COMPILER "$ENV{CONDA_PREFIX}/bin/nvcc")
+#    set(CUDA_TOOLKIT_ROOT_DIR "$ENV{CONDA_PREFIX}/targets/x86_64-linux")
+#endif()
+# Force system CUDA instead of conda CUDA
+set(CMAKE_CUDA_COMPILER "/usr/local/cuda/bin/nvcc")
+set(CUDA_TOOLKIT_ROOT_DIR "/usr/local/cuda/targets/x86_64-linux")
 
 cmake_policy(SET CMP0060 NEW)
 

@@ -1,0 +1,15 @@
+# 1.  Completely remove build dir and any CMake cache:
+rm -rf build CMakeCache.txt CMakeFiles
+
+# 2.  Unset any conda CUDA variables:
+unset CUDACXX
+unset CUDA_HOME
+unset CMAKE_CUDA_COMPILER
+
+# 3. Set the correct CUDA compiler BEFORE running cmake:
+export CUDACXX=/usr/local/cuda/bin/nvcc
+
+# 4. Now run cmake:
+cmake -S .  -B build \
+  -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc \
+  -DCMAKE_INSTALL_PREFIX="$(pwd)/triangulation"
