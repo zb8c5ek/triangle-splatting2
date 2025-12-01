@@ -1,1 +1,0 @@
-Namespace(sh_degree=3, source_path='/d_disk/triangle-splatting2/D:triangle-splatting2assets360_extra_scenesflowers', model_path='D:triangle-splatting2assets360_extra_scenesflowers_render-train', images='images', resolution=-1, white_background=False, data_device='cuda', eval=True)
