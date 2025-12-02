@@ -26,3 +26,6 @@ python metrics.py -m /d_disk/triangle-splatting2/models/flowers
 
 python create_ply.py /d_disk/triangle-splatting2/models/flowers/point_cloud/iteration_30000
 python create_video.py -m /d_disk/triangle-splatting2/models/flowers -s /d_disk/triangle-splatting2/assets/360_extra_scenes/flowers
+
+
+python create_video.py -m /d_disk/triangle-splatting2/models/flowers -s /d_disk/triangle-splatting2/assets/360_extra_scenes/flowers
