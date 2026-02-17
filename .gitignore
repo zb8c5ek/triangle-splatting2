@@ -178,3 +178,5 @@ cython_debug/
 /models
 mesh.ply
 *.mp4
+/build_triangulation
+
